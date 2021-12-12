@@ -1,0 +1,32 @@
+<div align="center">
+  <mat-card class="mat-elevation-z10">
+    <h4> Registered User Details</h4>
+    <table border="1">
+      <ng-container>
+        <tr>
+          <td>ID</td>
+          <td>Email</td>
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Action</td>
+        </tr>
+      </ng-container>
+      <ng-container>
+        <tr *ngFor="let user of userInfo.data">
+          <td>{{user.id}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.first_name}}</td>
+          <td>{{user.last_name}}</td>
+          <td>
+            <button mat-raised-button color="primary" routerLink="">Edit</button>
+
+            <button mat-raised-button color="accent" (click)="deleteUser(1)">Delete</button>
+
+          </td>
+        </tr>
+      </ng-container>
+
+    </table>
+    <p>
+  </mat-card>
+</div>

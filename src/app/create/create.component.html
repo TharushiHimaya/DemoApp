@@ -1,0 +1,37 @@
+<div class="main-div">
+    <mat-card class="c1" class="mat-elevation-z10">
+        <mat-toolbar color="primary">
+            <mat-card-title>Registration Form</mat-card-title>
+        </mat-toolbar>
+        <br>
+        <mat-card-subtitle>Please Enter Your Details</mat-card-subtitle>
+        <div>
+            <form action="/list">
+                <div>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>User ID</mat-label>
+                        <input matInput required placeholder="Enter id" [(ngModel)]="user.id" [ngModelOptions]="{standalone: true}"/>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="pat@example.com" required 
+                            [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}"/>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>First Name</mat-label>
+                        <input matInput placeholder="Enter First Name" [(ngModel)]="user.first_name" [ngModelOptions]="{standalone: true}"/>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput required placeholder="Enter Last Name" [(ngModel)]="user.last_name" [ngModelOptions]="{standalone: true}"/>
+                    </mat-form-field>
+                    <br>
+                </div>
+                <button type="submit" mat-raised-button color="primary" (click)="createUser()">Save</button>
+            </form> <br>
+        </div>
+    </mat-card>
+</div>
